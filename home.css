@@ -11,21 +11,29 @@ a , a:visited{
 
 /*Nagivation------------------------------------------------------*/
 #navigation{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
     background-color: #fff;
     padding:0px;
     margin:0px;
     border-bottom:#ccc 2px solid;
 }
+
+
 .labels{
-    margin:0;
+    margin-right:20px;
     padding:0;
-    width: 90%;
-    margin-left:10%;
-    display:inline;
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:stretch;
 }
 
 #navigation a , #navigation a:visited{
-    float:right;
+    min-width: 70px;
+    text-align: center;
     font-family:'Source Sans Pro',Arial, Helvetica, sans-serif;
     font-size: 15.5px;
     font-weight: 600;
@@ -34,6 +42,23 @@ a , a:visited{
     background-color: #eee;
     border-bottom:#ccc 2px solid;
 }
+
+@media screen and (max-width: 500px) {
+    #navigation img {
+        width: 120px;
+        height: auto;
+    }
+    #navigation a , #navigation a:visited{
+        min-width: 50px;
+        font-size: 12px;
+    }
+    .labels{
+        margin-right:15px;
+        align-items:stretch;
+    }
+  }
+
+
 
 #navigation a:hover{
     background-color: #ccc;
@@ -81,9 +106,25 @@ a , a:visited{
     height: auto;
 }
 
+@media screen and (max-width: 700px) {
+    .row-flex img{
+        width:60%;
+        height: auto;
+    }   
+    .welcome-info{
+        margin-right:5px;
+        padding:0;
+    }
+    #welcome p{
+        font-size: 3vw;
+        margin:5px;
+    }
+    
+}
+
 #get-started{
     text-align: center;
-    padding-top:20px;
+    padding-top:50px;
     padding-bottom: 50px;
 }
 #welcome a, #welcome a:visited{
@@ -146,6 +187,14 @@ a , a:visited{
     margin-bottom: 50px;
 }
 
+.row-rev-flex-desc{
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content:space-evenly;
+    align-items:center;
+    margin-bottom: 50px;
+}
+
 #desc h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
@@ -159,7 +208,12 @@ a , a:visited{
     border-radius: 15px;
 }
 
-#desc img{
+.row-flex-desc img{
+    width:40%;
+    height: auto;
+}
+
+.row-rev-flex-desc img{
     width:40%;
     height: auto;
 }
@@ -167,6 +221,43 @@ a , a:visited{
 .desc-img{
     text-align: center;
 }
+
+.right-img{
+    margin-left: 50px;
+}
+
+.left-img{
+    margin-right: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .row-flex-desc {
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+    }
+    .row-rev-flex-desc {
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+    }
+    .row-flex-desc img {
+        width: 60%;
+        height: auto;
+    }
+    .row-rev-flex-desc img {
+        width: 60%;
+        height: auto;
+    }
+
+    .right-img{
+        margin:0;
+    }
+
+    .left-img{
+        margin:0;
+    }
+  }
 /*Contact------------------------------------------------------------------------*/
 #contact{
     background-color: #333;
@@ -186,7 +277,11 @@ a , a:visited{
 }
 /*Footer-----------------------------------------------------------------*/
 #footer{
-    padding:10px 10px 20px 10px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
     margin:0;
     text-align:center;
     background-color: rgb(172, 172, 252);
@@ -194,15 +289,12 @@ a , a:visited{
 }
 
 #footer a , #footer a:visited{
+    height:20px;
+    padding:10px;
     font-family:'Source Sans Pro',Arial, Helvetica, sans-serif;
-    display: inline;
-    float:right;
-    margin:-10px 5px;
     background-color: rgb(150, 150, 253);
     color:blue;
     border-radius: 15px;
-    padding: 10px;
-    
 }
 
 #footer a:hover{
@@ -212,6 +304,4 @@ a , a:visited{
 
 #footer p{
     font-family:'Source Sans Pro',Arial, Helvetica, sans-serif;
-    display:inline;
-    margin-left:100px;
 }
